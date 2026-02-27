@@ -19,9 +19,16 @@ WHERE
     (Email LIKE '%gmail.com' OR Email LIKE '%yahoo.com');
 
 
--- MISIÓN 2: Limpieza de Inventario (IT)
--- Objetivo: Identificar archivos pesados (>15MB) y caros (>0.99).
--- En proceso...
+-- MISIÓN 2:  Limpieza de Inventario (IT)
+-- Objetivo: Identificar canciones pesadas y caras para optimizar espacio.
+SELECT 
+    TrackId as IdCancion,
+    Name as Nombre_cancion,
+    (Bytes / 1000000.0) as Megabytes,
+    UnitPrice as Precio_unitario
+FROM tracks
+WHERE Bytes > 15000000 AND UnitPrice > 0.99
+ORDER BY Bytes DESC;
 
 
 -- MISIÓN 3: Auditoría de Ventas (Contabilidad)
