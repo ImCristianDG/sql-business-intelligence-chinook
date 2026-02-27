@@ -33,4 +33,12 @@ ORDER BY Bytes DESC;
 
 -- MISIÓN 3: Auditoría de Ventas (Contabilidad)
 -- Objetivo: Facturas de USA/Canada entre 2010-2011 mayores a 10 USD.
--- En proceso...
+SELECT
+	InvoiceId,
+	BillingCountry,
+	InvoiceDate,
+	Total
+FROM invoices
+WHERE BillingCountry IN ('USA', 'Canada')
+	AND InvoiceDate BETWEEN '2010-01-01' AND '2011-12-31'
+	AND Total > 10;

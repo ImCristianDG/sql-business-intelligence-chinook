@@ -2,7 +2,7 @@
 
 Este repositorio contiene una serie de auditorías de datos realizadas sobre la base de datos Chinook. El objetivo es resolver problemas de negocio simulando pedidos de diferentes departamentos.
 
-## Fase 1: Filtrado y Logica de Negocio (En desarrollo)
+## Fase 1: Filtrado y Logica de Negocio (Completado)
 
 En esta etapa el foco esta en la extraccion de datos usando logica booleana y filtros.
 
@@ -22,9 +22,13 @@ Problema: El equipo de IT necesita identificar canciones pesadas que consumen mu
     - Uso de **Alias** (`AS`) para presentar los datos de forma clara y legible.
     - Aplicación de `ORDER BY ... DESC` para priorizar los archivos de mayor tamaño en el reporte.
 
-### Mision 3: Auditoria de Ventas (Contabilidad) - [En proceso]
-- Objetivo: Revision de facturas de USA y Canada de los años 2010 y 2011 con montos mayores a 10 dolares.
-- Tecnicas a usar: Filtrado por rangos de fechas (BETWEEN) y seleccion multivariable.
+### Mision 3: Auditoria de Ventas (Contabilidad) - (Completado)
+Problema: El área contable requiere auditar facturas de USA y Canadá emitidas entre 2010 y 2011 que superen los 10 USD.
+
+- Solución Técnica: 
+    - Implementación del operador `BETWEEN` para filtrado de rangos de fechas precisos.
+    - Uso de `IN` para segmentación geográfica múltiple.
+    - Aplicación de filtros numéricos para identificar transacciones de alto valor.
 
 ---
 
