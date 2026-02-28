@@ -42,3 +42,15 @@ FROM invoices
 WHERE BillingCountry IN ('USA', 'Canada')
 	AND InvoiceDate BETWEEN '2010-01-01' AND '2011-12-31'
 	AND Total > 10;
+
+-- MISIÓN 4: Identificación de Clientes VIP (Ventas)
+-- Objetivo: Humanizar los datos de facturación para el equipo de Marketing. Cruzar nombres de clientes con facturas superiores a 20 USD.
+SELECT 
+    c.FirstName AS Nombre, 
+    c.LastName AS Apellido, 
+    c.Country AS Pais,
+    i.Total AS Monto_Compra
+FROM customers AS c
+INNER JOIN invoices AS i ON c.CustomerId = i.CustomerId
+WHERE i.Total > 20
+ORDER BY i.Total DESC;
