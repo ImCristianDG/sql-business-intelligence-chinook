@@ -32,6 +32,23 @@ Problema: El área contable requiere auditar facturas de USA y Canadá emitidas 
 
 ---
 
+## Fase 2: Relaciones y Agregaciones (En Progreso)
+
+En esta etapa, el foco cambia al cruce de datos entre diferentes departamentos para generar una visión 360° del negocio.
+
+### Misión 4: Identificación de Clientes VIP (Ventas)
+Problema: El equipo de ventas posee los montos de facturación, pero no puede identificar a los clientes por nombre. Se requiere "humanizar" los datos de las compras superiores a 20 USD para campañas de fidelización.
+
+- Solución Técnica: 
+    - Implementación de `INNER JOIN` para vincular la tabla `customers` con `invoices`.
+    - Uso de **claves foráneas** (`CustomerId`) como puente para cruzar identidad con comportamiento de compra.
+    - Segmentación de clientes de alto valor mediante operadores de comparación (`>`).
+
+- Recomendación de Negocio: 
+"Dado que estos clientes representan el ticket promedio más alto, se sugiere al equipo de Marketing realizar una encuesta de satisfacción exclusiva o enviar un código de descuento para asegurar su retención".
+
+---
+
 ## Herramientas
 * Motor: SQLite
 * Gestion de DB: DB Browser for SQLite / VS Code
