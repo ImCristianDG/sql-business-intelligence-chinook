@@ -42,7 +42,11 @@ FROM invoices
 WHERE BillingCountry IN ('USA', 'Canada')
 	AND InvoiceDate BETWEEN '2010-01-01' AND '2011-12-31'
 	AND Total > 10;
-
+/************************************************************
+PROYECTO: Auditoría de Negocio Chinook - Fase 2
+AUTOR: ImCristianDG
+DESCRIPCIÓN: Resolución de problemas de integración y análisis de rentabilidad por departamentos.
+************************************************************/
 -- MISIÓN 4: Identificación de Clientes VIP (Ventas)
 -- Objetivo: Humanizar los datos de facturación para el equipo de Marketing. Cruzar nombres de clientes con facturas superiores a 20 USD.
 SELECT 
