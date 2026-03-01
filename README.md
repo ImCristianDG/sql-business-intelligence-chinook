@@ -58,4 +58,4 @@ Problema: El equipo de ventas posee los montos de facturación, pero no puede id
 ---
 
 Autor: ImCristianDG
-Estado: Fase 1 - Mision 1 y 2 completada.
+Estado: Fase 2 - Mision 5 en progreso.
