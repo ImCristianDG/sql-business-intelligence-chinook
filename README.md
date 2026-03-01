@@ -58,6 +58,17 @@ Problema: El equipo de contenidos no puede segmentar campañas de "Rock" porque 
 - Recomendación de Negocio:
 "Al haber validado un inventario de 1,297 canciones de Rock, el equipo de Marketing puede lanzar con seguridad la campaña deseada, sabiendo exactamente qué canciones y compositores integran el catálogo."
 
+### Misión 6: Reporte de Ingresos por Territorio (Finanzas)
+Problema: La gerencia financiera necesitaba una visión global de las ventas para decidir dónde invertir presupuesto publicitario, ya que las facturas individuales no permitían ver el panorama completo.
+
+- Solución Técnica:
+    - Uso de funciones de agregación (`SUM`) para calcular el total de dinero.
+    - Implementación de `GROUP BY` para colapsar las 412 facturas en 24 grupos (uno por país).
+    - Ordenamiento descendente (`DESC`) para visualizar el podio de ingresos.
+
+- Recomendación de Negocio:
+"Dado que USA representa casi el doble de ingresos que Canada, se recomienda **reforzar la inversión publicitaria** en este país para fidelizar a los clientes de mayor volumen. A su vez, debido a la escala demográfica de Brasil, el potencial de adquisición de nuevos clientes es significativamente mayor. Una campaña de marketing local en Brasil tiene más probabilidades de generar un retorno de inversión (ROI) masivo que en el mercado francés, que es geográficamente más limitado."
+
 ---
 
 ## Herramientas
