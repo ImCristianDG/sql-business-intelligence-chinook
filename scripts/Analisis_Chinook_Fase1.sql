@@ -60,3 +60,13 @@ FROM customers AS c
 INNER JOIN invoices AS i ON c.CustomerId = i.CustomerId
 WHERE i.Total > 20
 ORDER BY i.Total DESC;
+
+-- MISION 5: Traducción de Catálogo (Contenido/Marketing)
+-- Objetivo: Vincular nombres de canciones con sus géneros para facilitar campañas de nicho.
+SELECT 
+    t.Name AS Cancion, 
+    t.Composer AS Compositor,
+    g.Name AS Genero
+FROM tracks AS t
+INNER JOIN genres AS g ON t.GenreId = g.GenreId
+WHERE g.Name = 'Rock';

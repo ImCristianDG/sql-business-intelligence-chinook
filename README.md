@@ -47,6 +47,17 @@ Problema: El equipo de ventas posee los montos de facturación, pero no puede id
 - Recomendación de Negocio: 
 "Dado que estos clientes representan el ticket promedio más alto, se sugiere al equipo de Marketing realizar una encuesta de satisfacción exclusiva o enviar un código de descuento para asegurar su retención".
 
+### Misión 5: Traducción de Catálogo para Marketing
+Problema: El equipo de contenidos no puede segmentar campañas de "Rock" porque la base de datos de canciones solo utiliza códigos numéricos (IDs) para los géneros.
+
+- Solución Técnica:
+    - Implementación de `INNER JOIN` entre `tracks` y `genres`.
+    - Uso de **Alias de tabla** (`t`, `g`) para optimizar la legibilidad del código.
+    - Filtrado semántico por nombre de género en lugar de ID técnico.
+
+- Recomendación de Negocio:
+"Al haber validado un inventario de 1,297 canciones de Rock, el equipo de Marketing puede lanzar con seguridad la campaña deseada, sabiendo exactamente qué canciones y compositores integran el catálogo."
+
 ---
 
 ## Herramientas
@@ -58,4 +69,4 @@ Problema: El equipo de ventas posee los montos de facturación, pero no puede id
 ---
 
 Autor: ImCristianDG
-Estado: Fase 2 - Mision 5 en progreso.
+Estado: Fase 2 - Mision 6 en progreso.
