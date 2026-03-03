@@ -71,10 +71,8 @@ Problema: La gerencia financiera necesitaba una visión global de las ventas par
 
 ---
 
-## Fase 3: Consultas Avanzadas y Automatización - (En proceso)
+## Fase 3: Consultas Avanzadas y Automatización - (Completada)
 En esta etapa, el análisis deja de ser estático para volverse dinámico. El objetivo es resolver problemas complejos mediante lógica anidada (Subqueries) y preparar la base de datos para usuarios finales mediante Vistas (Views).
-
----
 
 ### Misión 7: Identificación de Clientes VIP (Ventas) - (Completada)
 Problema: El departamento de Fidelización necesitaba identificar a los clientes con tickets de compra superiores a la media. Como el promedio de ventas de la tienda varía cada vez que entra una factura nueva, no se podía usar un número estático; se requería una solución que "piense" sola.
@@ -87,6 +85,14 @@ Problema: El departamento de Fidelización necesitaba identificar a los clientes
 - Recomendación de Negocio:
 "Se identificó un grupo selecto de clientes cuyos gastos duplican o triplican el promedio general (aprox. $5.65). Se recomienda asignar a estos clientes un **estatus VIP** con beneficios exclusivos, como acceso anticipado a nuevos álbumes o descuentos por lealtad. Mantener a este pequeño grupo satisfecho es más rentable que adquirir 10 clientes nuevos de bajo ticket, siguiendo la ley de Pareto (80/20)."
 
+### Misión 8: Automatización y Vistas (Arquitectura) - (Completada)
+**Problema:** El equipo de ventas necesita consultar el ranking de VIPs sin manipular código SQL complejo.
+
+- Solución Técnica: 
+- Creación de una **VIEW** llamada `Lista_Clientes_VIP`. Se utilizó **concatenación** (`||`) para unificar nombres y apellidos, encapsulando la lógica anterior.
+
+- **Nota:** Ahora, cualquier usuario puede obtener el listado actualizado ejecutando: `SELECT * FROM Lista_Clientes_VIP;`.
+
 ---
 
 ## Herramientas
@@ -98,4 +104,4 @@ Problema: El departamento de Fidelización necesitaba identificar a los clientes
 ---
 
 Autor: ImCristianDG
-Estado: Fase 3 - Mision 8 en proceso.
+Estado: Fase 3 - Finalizada.
