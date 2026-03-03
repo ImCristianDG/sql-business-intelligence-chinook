@@ -12,3 +12,19 @@ WHERE i.Total > (
     SELECT AVG(Total) FROM invoices
 )
 ORDER BY i.Total DESC;
+
+-- MISIÓN 8: Creación de Vista (Automatización)
+-- Objetivo: Guardar la lógica para que otros la usen fácilmente.
+CREATE VIEW Lista_Clientes_VIP AS
+SELECT 
+    i.InvoiceId AS Factura_ID,
+    c.FirstName || ' ' || c.LastName AS Cliente,
+    i.Total AS Monto_Factura
+FROM invoices AS i
+INNER JOIN customers AS c ON i.CustomerId = c.CustomerId
+WHERE i.Total > (
+    SELECT AVG(Total) FROM invoices
+)
+ORDER BY i.Total DESC;
+-- TEST DE LA VISTA:
+-- SELECT * FROM Lista_Clientes_VIP;

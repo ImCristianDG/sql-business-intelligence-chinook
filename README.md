@@ -71,6 +71,24 @@ Problema: La gerencia financiera necesitaba una visión global de las ventas par
 
 ---
 
+## Fase 3: Consultas Avanzadas y Automatización - (En proceso)
+En esta etapa, el análisis deja de ser estático para volverse dinámico. El objetivo es resolver problemas complejos mediante lógica anidada (Subqueries) y preparar la base de datos para usuarios finales mediante Vistas (Views).
+
+---
+
+### Misión 7: Identificación de Clientes VIP (Ventas) - (Completada)
+Problema: El departamento de Fidelización necesitaba identificar a los clientes con tickets de compra superiores a la media. Como el promedio de ventas de la tienda varía cada vez que entra una factura nueva, no se podía usar un número estático; se requería una solución que "piense" sola.
+
+- Solución Técnica:
+    - Implementación de una **Subconsulta (Subquery)** dentro de la cláusula `WHERE` para calcular el promedio dinámico de la tabla `invoices`.
+    - Uso de `INNER JOIN` para cruzar los IDs de las facturas con la tabla `customers`, permitiendo "humanizar" el dato con nombres y apellidos.
+    - Ordenamiento descendente (`DESC`) para priorizar a los clientes con mayor volumen de compra en el reporte.
+
+- Recomendación de Negocio:
+"Se identificó un grupo selecto de clientes cuyos gastos duplican o triplican el promedio general (aprox. $5.65). Se recomienda asignar a estos clientes un **estatus VIP** con beneficios exclusivos, como acceso anticipado a nuevos álbumes o descuentos por lealtad. Mantener a este pequeño grupo satisfecho es más rentable que adquirir 10 clientes nuevos de bajo ticket, siguiendo la ley de Pareto (80/20)."
+
+---
+
 ## Herramientas
 * Motor: SQLite
 * Gestion de DB: DB Browser for SQLite / VS Code
@@ -80,4 +98,4 @@ Problema: La gerencia financiera necesitaba una visión global de las ventas par
 ---
 
 Autor: ImCristianDG
-Estado: Fase 2 - Finalizada.
+Estado: Fase 3 - Mision 8 en proceso.
