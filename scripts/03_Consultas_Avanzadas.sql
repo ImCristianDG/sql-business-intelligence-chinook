@@ -26,5 +26,5 @@ WHERE i.Total > (
     SELECT AVG(Total) FROM invoices
 )
 ORDER BY i.Total DESC;
--- TEST DE LA VISTA:
--- SELECT * FROM Lista_Clientes_VIP;
+--- TEST DE LA VISTA:
+--- SELECT * FROM Lista_Clientes_VIP;
